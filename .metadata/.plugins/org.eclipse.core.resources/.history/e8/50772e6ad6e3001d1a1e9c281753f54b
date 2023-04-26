@@ -1,0 +1,15 @@
+package com.java.main;
+
+import com.java.view.AppUI;
+import static com.java.view.AppUI.inputInteger; //import 스태틱 
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		while(true) {
+			AppUI.startScreen();
+			int selectNumber = AppUI.inputInteger();			
+		}
+	}
+}

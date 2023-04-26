@@ -1,0 +1,31 @@
+package com.java.user.service;
+
+import com.java.common.AppService;
+import com.java.view.AppUI;
+
+public class UserService implements AppService{
+
+	@Override
+	public void start() {
+		while(true) {
+			AppUI.userManagementScreen();
+			int selection = AppUI.inputInteger();
+			switch (selection) {
+			case 1:				
+				break;
+			case 2:				
+				break;
+			case 3:				
+				break;
+			case 4:				
+				break;	
+
+			default:
+				System.out.println("메뉴를 다시 입력하세요.");
+			}
+			System.out.println(("\n============계속진행하려면 ENTER를 누르세요================"));
+			AppUI.inputInteger();
+			
+		}
+	}
+}

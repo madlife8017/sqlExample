@@ -1,0 +1,42 @@
+package com.java.user.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.java.common.DataBaseConnection;
+import com.java.user.domain.User;
+
+public class UserRepository {
+	
+	Connection conn = null;
+	PreparedStatement pstmt  = null;
+	ResultSet rs = null;
+	
+	public void addUser(User user) {
+		System.out.println("repository: " + user);
+		String sql ="INSERT INTO users(user_number, user_name, user_phone) "
+				+ "VALUES(users_seq.NEXTVAL,?,?)";
+		
+		DataBaseConnection connection = 
+				DataBaseConnection.getInstance();
+		
+		
+		
+		try {
+			Connection conn = connection.getConnection();
+		} catch (Exception e) {			
+			e.printStackTrace();
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
+

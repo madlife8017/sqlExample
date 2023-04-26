@@ -1,0 +1,51 @@
+package com.java.user.service;
+
+import com.java.common.AppService;
+import com.java.user.domain.User;
+import com.java.user.repository.UserRepository;
+import com.java.view.AppUI;
+
+public class UserService implements AppService{
+	
+	private final UserRepository userRepository = new UserRepository();
+
+	@Override
+	public void start() {
+		while(true) {
+			AppUI.userManagementScreen();
+			int selection = AppUI.inputInteger();
+			switch (selection) {
+			case 1:		
+				join();
+				break;
+			case 2:				
+				break;
+			case 3:				
+				break;
+			case 4:				
+				break;	
+
+			default:
+				System.out.println("메뉴를 다시 입력하세요.");
+			}
+			System.out.println(("\n============계속진행하려면 ENTER를 누르세요================"));
+			AppUI.inputInteger();
+			
+		}
+	}
+	//회원 추가 로직
+	private void join() {
+		
+		System.out.println("\n======회원 가입을 진행합니다.=======");
+		System.out.print("# 회원명 : ");
+		String name = AppUI.inputString();
+		
+		System.out.print("# 전화번호 : ");
+		String phone = AppUI.inputString();
+		User user = new User();
+		user.setUserName(name);
+		user.setPhoneNumber(phone);
+		userRepository.addUser(null);
+		
+	}
+}
