@@ -3,12 +3,13 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="com.java.user.service.UserService"/>
-    <fullyQualifiedTypeName name="com.java.common.AppService"/>
-    <fullyQualifiedTypeName name="com.java.view.AppUI"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="com.java.user.repository.UserRepository"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="com.java.common.DataBaseConnection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="com.java.view.AppUI"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="com.java.common.AppService"/>
 </qualifiedTypeNameHistroy>

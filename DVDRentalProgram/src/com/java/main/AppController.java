@@ -2,6 +2,7 @@ package com.java.main;
 
 import com.java.common.AppService;
 import com.java.movie.service.MovieService;
+import com.java.order.service.OrderService;
 import com.java.user.service.UserService;
 
 public class AppController {
@@ -15,7 +16,7 @@ public class AppController {
 			service = new UserService();
 			break;
 		case 2:
-			
+			service = new OrderService();
 			break;
 		case 3:
 			service = new MovieService();

@@ -10,6 +10,7 @@ import java.util.List;
 import com.java.common.AppService;
 import com.java.movie.domain.Movie;
 import com.java.movie.repository.MovieRepository;
+import com.java.order.repository.OrderRepository;
 import com.java.user.domain.User;
 import com.java.user.repository.UserRepository;
 
@@ -26,7 +27,7 @@ public class OrderService implements AppService {
 		
 		switch (selection) {
 		case 1:
-			
+			processOrderDvd();
 			break;
 		case 2:
 			
@@ -111,7 +112,7 @@ public class OrderService implements AppService {
 			System.out.print(">>> ");
 			int userNumber = inputInteger();
 			if(userNums.contains(userNumber)) {
-				
+				orderRepository.addOrder(movieNumber, userNumber);
 			} else {
 				System.out.println("\n### 검색이 된 회원의 번호를 입력해야 합니다.");
 			}
